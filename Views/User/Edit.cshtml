@@ -1,0 +1,49 @@
+@model Stuffed.Models.UserModel
+@{
+    ViewData["Title"] = "Edit";
+}
+<center><h4>Editar Usuario</h4>
+<form asp-action="Edit">
+<table border="0">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="ID"/>
+<tr>
+    <td width="40%">Nombres:</td>
+    <td width="60%"><input type="text" asp-for="first_name">
+    <span asp-validation-for="first_name" class="text-danger"></span>
+    </td>
+</tr>
+
+<tr>
+    <td width="40%">Apellidos:</td>
+    <td width="60%"><input type="text" asp-for="last_name">
+    <span asp-validation-for="last_name" class="text-danger"></span>
+    </td>
+</tr>
+
+<tr>
+    <td width="40%">Fecha:</td>
+    <td width="60%"><input type="date" asp-for="fecha" >
+    <span asp-validation-for="fecha" class="text-danger"></span>
+    </td>
+</tr>
+<tr>
+    <td width="40%">Página:</td>
+    <td width="60%"><input type="number" asp-for="pagina">
+    <span asp-validation-for="pagina" class="text-danger"></span>
+    </td>
+</tr>
+<tr>
+    <td width="40%">Libro:</td>
+    <td width="60%"><input type="number" asp-for="libro">
+    <span asp-validation-for="libro" class="text-danger"></span>
+    </td>
+</tr>
+    </table>
+  
+  <input type="submit" value="Guardar" class="btn btn-primary"/>
+  </form>
+  </center>
+  <h2>
+     <center> @Html.DisplayFor(model => model.Mensaje) </center>
+  </h2>
